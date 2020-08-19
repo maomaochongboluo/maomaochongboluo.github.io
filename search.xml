@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>500 (Internal Server Error) 错误总结</title>
+    <url>/2020/08/18/500%20(Internal%20Server%20Error)%20%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p><strong>大致有三类</strong></p>
+<h3 id="1-后台接口出错，或是项目没有启动"><a href="#1-后台接口出错，或是项目没有启动" class="headerlink" title="1.后台接口出错，或是项目没有启动"></a>1.后台接口出错，或是项目没有启动</h3><h3 id="2-前后端存在跨域问题"><a href="#2-前后端存在跨域问题" class="headerlink" title="2.前后端存在跨域问题"></a>2.前后端存在跨域问题</h3><h3 id="3-前端的传参出现问题，修改参数类型或参数值"><a href="#3-前端的传参出现问题，修改参数类型或参数值" class="headerlink" title="3.前端的传参出现问题，修改参数类型或参数值"></a>3.前端的传参出现问题，修改参数类型或参数值</h3>]]></content>
+  </entry>
+  <entry>
+    <title>清明哀悼网页变灰原理</title>
+    <url>/2020/08/19/%E6%B8%85%E6%98%8E%E5%93%80%E6%82%BC%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: grayscale</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">过渡器，灰度  </span></span><br><span class="line"><span class="comment">只需添加一个css属性即可实现</span></span><br><span class="line"><span class="comment">可以直接在浏览器中进行测试</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>关于前后端数据传输类型问题的整理</title>
+    <url>/2020/08/17/%E5%85%B3%E4%BA%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%B1%BB%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>开发过程中遇到的关于前后端数据传输的问题及解决方案</p>
+<h3 id="1-前端用axios向后端传一个数组"><a href="#1-前端用axios向后端传一个数组" class="headerlink" title="1.前端用axios向后端传一个数组"></a>1.前端用axios向后端传一个数组</h3><p>今天在写代码的时候碰到一个前端用axios传输一个数组的问题，传输一个数组对象与传输一个值得方法不一样，导致前端一直报400错误。ids为后端接受的数组字段，传输一个数组的方法其一应该是如下代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* FormData 接口提供了一种表示表单数据的键值对的构造方式，经过它的数据可以使用了XMLHttpRequest.send() 方法送出，本接口和此方法都相当简单直接。如果送出时的编码类型被设为 &quot;multipart/form-data&quot;，它会使用和表单一样的格式。 */</span></span><br><span class="line"><span class="keyword">let</span> formData = <span class="keyword">new</span> FormData()</span><br><span class="line"><span class="built_in">this</span>.selectedIds.forEach(<span class="function"><span class="params">s</span> =&gt;</span> &#123;  <span class="comment">// 使用forEach循环将选中的值存入formData对象中。</span></span><br><span class="line">    formData.append(<span class="string">&#x27;ids&#x27;</span>, s)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">/* FormData 接口的append() 方法 会添加一个新值到 FormData 对象内的一个已存在的键中，如果键不存在则会添加该键FormData.set 和 append() 的区别在于，如果指定的键已经存在， FormData.set 会使用新值覆盖已有的值，而 append() 会把新值添加到已有值集合的后面。 */</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">this</span>._AJAX(&#123;</span><br><span class="line">    url: url,</span><br><span class="line">    data: formData,</span><br><span class="line">    method: <span class="string">&#x27;POST&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 结果处理</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h2><p>我调用的方法返回给我值叫做返回对象</p>
+]]></content>
+      <categories>
+        <category>数据传输</category>
+      </categories>
+  </entry>
+</search>
