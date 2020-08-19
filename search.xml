@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>VsCode、Typora快捷键总结</title>
+    <url>/2020/04/13/VsCode%E3%80%81Typora%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="VsCode"><a href="#VsCode" class="headerlink" title="VsCode"></a>VsCode</h2><p><strong>生成html模板</strong></p>
+<p>！+ tab</p>
+<p><strong>格式化</strong></p>
+<p>shift + alt + F</p>
+<p><strong>单行注释</strong></p>
+<p>ctrl+k+C</p>
+<p>ctrl + /</p>
+<p><strong>多行注释</strong></p>
+<p>alt+shift+A</p>
+<p><strong>快速复制一行</strong></p>
+<p>alt+shift+ ⬇</p>
+<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><p><strong>生成代码块</strong></p>
+<p>ctrl+shift+K</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+  </entry>
+  <entry>
     <title>500 (Internal Server Error) 错误总结</title>
     <url>/2020/08/18/500%20(Internal%20Server%20Error)%20%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p><strong>大致有三类</strong></p>
