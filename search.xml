@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>500 (Internal Server Error) 错误总结</title>
-    <url>/2020/08/18/500%20(Internal%20Server%20Error)%20%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p><strong>大致有三类</strong></p>
-<h3 id="1-后台接口出错，或是项目没有启动"><a href="#1-后台接口出错，或是项目没有启动" class="headerlink" title="1.后台接口出错，或是项目没有启动"></a>1.后台接口出错，或是项目没有启动</h3><h3 id="2-前后端存在跨域问题"><a href="#2-前后端存在跨域问题" class="headerlink" title="2.前后端存在跨域问题"></a>2.前后端存在跨域问题</h3><h3 id="3-前端的传参出现问题，修改参数类型或参数值"><a href="#3-前端的传参出现问题，修改参数类型或参数值" class="headerlink" title="3.前端的传参出现问题，修改参数类型或参数值"></a>3.前端的传参出现问题，修改参数类型或参数值</h3>]]></content>
-      <categories>
-        <category>报错</category>
-      </categories>
-      <tags>
-        <tag>报错</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VsCode、Typora快捷键总结</title>
-    <url>/2020/04/13/VsCode%E3%80%81Typora%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h2 id="VsCode"><a href="#VsCode" class="headerlink" title="VsCode"></a>VsCode</h2><p><strong>生成html模板</strong></p>
-<p>！+ tab</p>
-<p><strong>格式化</strong></p>
-<p>shift + alt + F</p>
-<p><strong>单行注释</strong></p>
-<p>ctrl+k+C</p>
-<p>ctrl + /</p>
-<p><strong>多行注释</strong></p>
-<p>alt+shift+A</p>
-<p><strong>快速复制一行</strong></p>
-<p>alt+shift+ ⬇</p>
-<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><p><strong>生成代码块</strong></p>
-<p>ctrl+shift+K</p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>VsCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>lin0214的博客</title>
-    <url>/2020/08/20/lin0214%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p><strong>点击标题（lin0214的博客），打开左上角的播放器听首歌吧</strong></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-  </entry>
-  <entry>
     <title>css知识点记录</title>
     <url>/2020/08/20/css%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p><strong>transform属性</strong></p>
@@ -102,6 +57,39 @@
       </tags>
   </entry>
   <entry>
+    <title>VsCode、Typora快捷键总结</title>
+    <url>/2020/04/13/VsCode%E3%80%81Typora%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="VsCode"><a href="#VsCode" class="headerlink" title="VsCode"></a>VsCode</h2><p><strong>生成html模板</strong></p>
+<p>！+ tab</p>
+<p><strong>格式化</strong></p>
+<p>shift + alt + F</p>
+<p><strong>单行注释</strong></p>
+<p>ctrl+k+C</p>
+<p>ctrl + /</p>
+<p><strong>多行注释</strong></p>
+<p>alt+shift+A</p>
+<p><strong>快速复制一行</strong></p>
+<p>alt+shift+ ⬇</p>
+<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><p><strong>生成代码块</strong></p>
+<p>ctrl+shift+K</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>VsCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lin0214的博客</title>
+    <url>/2020/08/20/lin0214%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p><strong>点击标题（lin0214的博客），打开左上角的播放器听首歌吧</strong></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+  </entry>
+  <entry>
     <title>清明哀悼网页变灰原理</title>
     <url>/2020/08/19/%E6%B8%85%E6%98%8E%E5%93%80%E6%82%BC%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: grayscale</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">过渡器，灰度  </span></span><br><span class="line"><span class="comment">只需添加一个css属性即可实现</span></span><br><span class="line"><span class="comment">可以直接在浏览器中进行测试</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
@@ -112,6 +100,18 @@
       </categories>
       <tags>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>500 (Internal Server Error) 错误总结</title>
+    <url>/2020/08/18/500%20(Internal%20Server%20Error)%20%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p><strong>大致有三类</strong></p>
+<h3 id="1-后台接口出错，或是项目没有启动"><a href="#1-后台接口出错，或是项目没有启动" class="headerlink" title="1.后台接口出错，或是项目没有启动"></a>1.后台接口出错，或是项目没有启动</h3><h3 id="2-前后端存在跨域问题"><a href="#2-前后端存在跨域问题" class="headerlink" title="2.前后端存在跨域问题"></a>2.前后端存在跨域问题</h3><h3 id="3-前端的传参出现问题，修改参数类型或参数值"><a href="#3-前端的传参出现问题，修改参数类型或参数值" class="headerlink" title="3.前端的传参出现问题，修改参数类型或参数值"></a>3.前端的传参出现问题，修改参数类型或参数值</h3>]]></content>
+      <categories>
+        <category>报错</category>
+      </categories>
+      <tags>
+        <tag>报错</tag>
       </tags>
   </entry>
   <entry>
