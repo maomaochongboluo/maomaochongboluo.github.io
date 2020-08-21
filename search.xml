@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>500 (Internal Server Error) 错误总结</title>
-    <url>/2020/08/18/500%20(Internal%20Server%20Error)%20%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p><strong>大致有三类</strong></p>
-<h3 id="1-后台接口出错，或是项目没有启动"><a href="#1-后台接口出错，或是项目没有启动" class="headerlink" title="1.后台接口出错，或是项目没有启动"></a>1.后台接口出错，或是项目没有启动</h3><h3 id="2-前后端存在跨域问题"><a href="#2-前后端存在跨域问题" class="headerlink" title="2.前后端存在跨域问题"></a>2.前后端存在跨域问题</h3><h3 id="3-前端的传参出现问题，修改参数类型或参数值"><a href="#3-前端的传参出现问题，修改参数类型或参数值" class="headerlink" title="3.前端的传参出现问题，修改参数类型或参数值"></a>3.前端的传参出现问题，修改参数类型或参数值</h3>]]></content>
-      <categories>
-        <category>报错</category>
-      </categories>
-      <tags>
-        <tag>报错</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>lin0214的博客</title>
-    <url>/2020/08/20/lin0214%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p><strong>点击标题（lin0214的博客），打开左上角的播放器听首歌吧</strong></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>清明哀悼网页变灰原理</title>
-    <url>/2020/08/19/%E6%B8%85%E6%98%8E%E5%93%80%E6%82%BC%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: grayscale</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">过渡器，灰度  </span></span><br><span class="line"><span class="comment">只需添加一个css属性即可实现</span></span><br><span class="line"><span class="comment">可以直接在浏览器中进行测试</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VsCode、Typora快捷键总结</title>
     <url>/2020/04/13/VsCode%E3%80%81Typora%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h2 id="VsCode"><a href="#VsCode" class="headerlink" title="VsCode"></a>VsCode</h2><p><strong>生成html模板</strong></p>
@@ -56,6 +22,18 @@
       </categories>
       <tags>
         <tag>VsCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>500 (Internal Server Error) 错误总结</title>
+    <url>/2020/08/18/500%20(Internal%20Server%20Error)%20%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p><strong>大致有三类</strong></p>
+<h3 id="1-后台接口出错，或是项目没有启动"><a href="#1-后台接口出错，或是项目没有启动" class="headerlink" title="1.后台接口出错，或是项目没有启动"></a>1.后台接口出错，或是项目没有启动</h3><h3 id="2-前后端存在跨域问题"><a href="#2-前后端存在跨域问题" class="headerlink" title="2.前后端存在跨域问题"></a>2.前后端存在跨域问题</h3><h3 id="3-前端的传参出现问题，修改参数类型或参数值"><a href="#3-前端的传参出现问题，修改参数类型或参数值" class="headerlink" title="3.前端的传参出现问题，修改参数类型或参数值"></a>3.前端的传参出现问题，修改参数类型或参数值</h3>]]></content>
+      <categories>
+        <category>报错</category>
+      </categories>
+      <tags>
+        <tag>报错</tag>
       </tags>
   </entry>
   <entry>
@@ -109,6 +87,95 @@
 ]]></content>
       <categories>
         <category>css之路</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于Vue解除双向绑定</title>
+    <url>/2020/08/21/%E5%85%B3%E4%BA%8EVue%E8%A7%A3%E9%99%A4%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
+    <content><![CDATA[<p>今天在用element的对话框组件进行数据的修改的时候，遇到了数据双向绑定使得获取单行的表格的值后，修改信息无法获取到对于的表格内的值，因为双向绑定同时修改了父页面的数据。</p>
+<p>所以用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">this</span>.theOneAdData = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.theTwoAdData))</span><br><span class="line"><span class="comment">// JSON.stringify()转化为json数组</span></span><br><span class="line"><span class="comment">// JSON.parse() json数组转化为对象</span></span><br></pre></td></tr></table></figure>
+
+<p>来解除双向绑定。</p>
+]]></content>
+      <categories>
+        <category>数据传输</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于前后端数据传输类型问题的整理</title>
+    <url>/2020/08/21/vue-cli%203.x%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>之所以要解决这个问题是因为在vue-cli 3.x 的版本没有了config里的配置文件，需要自己在根目录新建一个vue.config.js的文件来进行配置</p>
+<h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>安装axios</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install axios --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>在main.js文件中引入axios文件并配置</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 引入文件</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="comment">// 进行绑定</span></span><br><span class="line">Vue.prototype.$axios = axios</span><br><span class="line"><span class="comment">// 设置基础url</span></span><br><span class="line">axios.defaults.baseURL = <span class="string">&#x27;/api&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>在根目录下新建一个vue.config.js的文件，在里面进行跨域的配置</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    open: <span class="literal">true</span>,</span><br><span class="line">    host: <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    port: <span class="number">8080</span>,</span><br><span class="line">    https: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">// 以上的ip和端口是我们本机的;下面为需要跨域的</span></span><br><span class="line">    proxy: &#123; <span class="comment">// 配置跨域</span></span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>: &#123;</span><br><span class="line">        target: <span class="string">&#x27;http://localhost:3000&#x27;</span>, <span class="comment">// 这里后台的地址模拟的;应该填写你们真实的后台接口</span></span><br><span class="line">        ws: <span class="literal">true</span>,</span><br><span class="line">        changOrigin: <span class="literal">true</span>, <span class="comment">// 允许跨域</span></span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">&#x27;^/api&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">          <span class="comment">// 请求的时候使用这个api就可以</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h4><p>在需要进行数据访问的页面进行请求，比如我在App.vue中进行请求</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F; import LoginRegister from &#39;.&#x2F;components&#x2F;Login-Register.vue&#39;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;app&#39;,</span><br><span class="line">  components: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    this.$axios(&#123;</span><br><span class="line">      method: &#39;get&#39;,</span><br><span class="line">      url: &#39;&#x2F;&#39;</span><br><span class="line">    &#125;).then(res &#x3D;&gt; &#123;</span><br><span class="line">      console.log(res)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>可以进行这些的条件是你的后端的服务器已经搭建好了，哪怕只是发送一句hello world！</strong></p>
+<p><img src="C:\Users\ljl\AppData\Roaming\Typora\typora-user-images\image-20200419202625926.png" alt="image-20200419202625926"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xhr.js?b50d:178 POST http:&#x2F;&#x2F;localhost:8080&#x2F;api&#x2F;adminUserM&#x2F;del net::ERR_EMPTY_RESPONSE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">createError.js?2d83:16 Uncaught (in promise) Error: Network Error</span><br><span class="line">    at createError (createError.js?2d83:16)</span><br><span class="line">    at XMLHttpRequest.handleError (xhr.js?b50d:83)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Vue之路</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lin0214的博客</title>
+    <url>/2020/08/21/lin0214%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p><strong>点击标题（lin0214的博客），打开左上角的播放器听首歌吧</strong></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>前端常用网站汇总</title>
+    <url>/2020/08/21/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p>这里记录了一些前端开发好用方便的网站</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">工具类</span><br><span class="line"></span><br><span class="line">1、浏览器兼容性查询</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;www.caniuse.com&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">2、RGB与十六进制颜色码转换</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;www.sioe.cn&#x2F;yingyong&#x2F;yanse-rgb-16&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">3、图标库</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;fontawesome.com&#x2F;icons?d&#x3D;gallery</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;icon.52112.com&#x2F;</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;www.iconfont.cn&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">4、svg生成图标</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;icomoon.io&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">5、Lodash</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;www.html.cn&#x2F;doc&#x2F;lodash&#x2F;#_defaultsobject-sources</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">6、UI设计工具sketch</span><br><span class="line"></span><br><span class="line">http:&#x2F;&#x2F;www.sketchcn.com&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">7、接口管理工具Yapi</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;yapi.ymfe.org&#x2F;documents&#x2F;index.html</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">8、时间戳转换</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;tool.lu&#x2F;timestamp&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">9、浏览器兼容性测试</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;turbo.net&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">10、在线编辑工具</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;codepen.io&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">11、前端开发者社区</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;scotch.io&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">12、三次贝塞尔函数（cubic-bezier）在线调整</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;cubic-bezier.com&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">13、HTML、css、js在线编辑预览（主攻动画）下面是我的主页：</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;codepen.io&#x2F;dreamsqin</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">14、Git常见问题及解决方案</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;k88hudson&#x2F;git-flight-rules&#x2F;blob&#x2F;master&#x2F;README_zh-CN.md</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">框架及插件类</span><br><span class="line"></span><br><span class="line">1、OpenLayers2 API（官网：https:&#x2F;&#x2F;openlayers.org&#x2F;）</span><br><span class="line"></span><br><span class="line">http:&#x2F;&#x2F;dev.openlayers.org&#x2F;releases&#x2F;OpenLayers-2.13.1&#x2F;doc&#x2F;apidocs&#x2F;files&#x2F;OpenLayers-js.html</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">2、OpenLayers2 example</span><br><span class="line"></span><br><span class="line">http:&#x2F;&#x2F;dev.openlayers.org&#x2F;examples&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">3、Js动画库</span><br><span class="line"></span><br><span class="line">http:&#x2F;&#x2F;velocityjs.org&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">4、html2canvas（对dom进行“截图”生成带坐标的canvas副本）</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;html2canvas.hertzen.com&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">5、数字加载动画</span><br><span class="line"></span><br><span class="line">http:&#x2F;&#x2F;inorganik.github.io&#x2F;countUp.js&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">6、数据Mock</span><br><span class="line"></span><br><span class="line">http:&#x2F;&#x2F;mockjs.com&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">7、Vue视图框架element-ui</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;element.eleme.cn&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">8、React视图框架Ant Design</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;1x.ant.design&#x2F;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">9、基于Node的Websocket</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;ws</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">10、Node进程管理PM2</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;pm2.io&#x2F;doc&#x2F;en&#x2F;runtime&#x2F;quick-start&#x2F;?utm_source&#x3D;pm2&amp;utm_medium&#x3D;website&amp;utm_campaign&#x3D;rebranding</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">11、Node版本管理NVM</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;coreybutler&#x2F;nvm-windows&#x2F;releases</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">12、websocket的npm包Socket.io-client</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;socketio&#x2F;socket.io-client&#x2F;blob&#x2F;master&#x2F;docs&#x2F;API.md</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">13、vue的websocket插件Vue-Socket.io（基于Socket.io-client封装，支持Vuex）</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;MetinSeylan&#x2F;Vue-Socket.io&#x2F;blob&#x2F;master&#x2F;README.md</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">14、Chrome扩展程序库</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;173app.com&#x2F;chrome-ext</span><br></pre></td></tr></table></figure>
+
+
+
+<p>转载 <a href="https://www.cnblogs.com/dreamsqin/p/10954024.html">https://www.cnblogs.com/dreamsqin/p/10954024.html</a></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清明哀悼网页变灰原理</title>
+    <url>/2020/08/19/%E6%B8%85%E6%98%8E%E5%93%80%E6%82%BC%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: grayscale</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">过渡器，灰度  </span></span><br><span class="line"><span class="comment">只需添加一个css属性即可实现</span></span><br><span class="line"><span class="comment">可以直接在浏览器中进行测试</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>杂项</category>
       </categories>
       <tags>
         <tag>css</tag>

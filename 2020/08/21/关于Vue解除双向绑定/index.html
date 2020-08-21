@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>清明哀悼网页变灰原理 - 林</title>
+    <title>关于Vue解除双向绑定 - 林</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="123456789body&amp;#123;    filter: grayscale&amp;#125;/*过渡器，灰度  只需添加一个css属性即可实现可以直接在浏览器中进行测试*/
-
-"> 
+    <meta name="description" content="今天在用element的对话框组件进行数据的修改的时候，遇到了数据双向绑定使得获取单行的表格的值后，修改信息无法获取到对于的表格内的值，因为双向绑定同时修改了父页面的数据。
+所以用
+123this.,"> 
     <meta name="author" content="liujialin"> 
     <link rel="alternative" href="atom.xml" title="林" type="application/atom+xml"> 
     <link rel="icon" href="/img/lin.png"> 
@@ -42,7 +42,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://lin0214.top"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">清明哀悼网页变灰原理</h3>
+    <h3 class="subtitle">关于Vue解除双向绑定</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -57,17 +57,20 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">清明哀悼网页变灰原理</h1>
+        <h1 class="title">关于Vue解除双向绑定</h1>
         <div class="stuff">
-            <span>八月 19, 2020</span>
+            <span>八月 21, 2020</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: grayscale</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">过渡器，灰度  </span></span><br><span class="line"><span class="comment">只需添加一个css属性即可实现</span></span><br><span class="line"><span class="comment">可以直接在浏览器中进行测试</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+            <p>今天在用element的对话框组件进行数据的修改的时候，遇到了数据双向绑定使得获取单行的表格的值后，修改信息无法获取到对于的表格内的值，因为双向绑定同时修改了父页面的数据。</p>
+<p>所以用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.theOneAdData = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.theTwoAdData))</span><br><span class="line"><span class="comment">// JSON.stringify()转化为json数组</span></span><br><span class="line"><span class="comment">// JSON.parse() json数组转化为对象</span></span><br></pre></td></tr></table></figure>
 
+<p>来解除双向绑定。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">

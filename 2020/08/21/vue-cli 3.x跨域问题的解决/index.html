@@ -10,8 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="开发过程中遇到的关于前后端数据传输的问题及解决方案
-1.前端用axios向后端传一个数组今天在写代码的时候碰到一个前端用axios传输一个数组的问题，传输一个数组对象与传输一个值得方法不一样，导致前,"> 
+    <meta name="description" content="之所以要解决这个问题是因为在vue-cli 3.x 的版本没有了config里的配置文件，需要自己在根目录新建一个vue.config.js的文件来进行配置
+第一步安装axios
+1npm inst,"> 
     <meta name="author" content="liujialin"> 
     <link rel="alternative" href="atom.xml" title="林" type="application/atom+xml"> 
     <link rel="icon" href="/img/lin.png"> 
@@ -58,18 +59,36 @@
     <div class='main'>
         <h1 class="title">关于前后端数据传输类型问题的整理</h1>
         <div class="stuff">
-            <span>八月 17, 2020</span>
+            <span>八月 21, 2020</span>
             
   <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <p>开发过程中遇到的关于前后端数据传输的问题及解决方案</p>
-<h3 id="1-前端用axios向后端传一个数组"><a href="#1-前端用axios向后端传一个数组" class="headerlink" title="1.前端用axios向后端传一个数组"></a>1.前端用axios向后端传一个数组</h3><p>今天在写代码的时候碰到一个前端用axios传输一个数组的问题，传输一个数组对象与传输一个值得方法不一样，导致前端一直报400错误。ids为后端接受的数组字段，传输一个数组的方法其一应该是如下代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* FormData 接口提供了一种表示表单数据的键值对的构造方式，经过它的数据可以使用了XMLHttpRequest.send() 方法送出，本接口和此方法都相当简单直接。如果送出时的编码类型被设为 &quot;multipart/form-data&quot;，它会使用和表单一样的格式。 */</span></span><br><span class="line"><span class="keyword">let</span> formData = <span class="keyword">new</span> FormData()</span><br><span class="line"><span class="built_in">this</span>.selectedIds.forEach(<span class="function"><span class="params">s</span> =&gt;</span> &#123;  <span class="comment">// 使用forEach循环将选中的值存入formData对象中。</span></span><br><span class="line">    formData.append(<span class="string">&#x27;ids&#x27;</span>, s)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">/* FormData 接口的append() 方法 会添加一个新值到 FormData 对象内的一个已存在的键中，如果键不存在则会添加该键FormData.set 和 append() 的区别在于，如果指定的键已经存在， FormData.set 会使用新值覆盖已有的值，而 append() 会把新值添加到已有值集合的后面。 */</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">this</span>._AJAX(&#123;</span><br><span class="line">    url: url,</span><br><span class="line">    data: formData,</span><br><span class="line">    method: <span class="string">&#x27;POST&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 结果处理</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+            <p>之所以要解决这个问题是因为在vue-cli 3.x 的版本没有了config里的配置文件，需要自己在根目录新建一个vue.config.js的文件来进行配置</p>
+<h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>安装axios</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save</span><br></pre></td></tr></table></figure>
 
-<h2 id="返回对象"><a href="#返回对象" class="headerlink" title="返回对象"></a>返回对象</h2><p>我调用的方法返回给我值叫做返回对象</p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>在main.js文件中引入axios文件并配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入文件</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="comment">// 进行绑定</span></span><br><span class="line">Vue.prototype.$axios = axios</span><br><span class="line"><span class="comment">// 设置基础url</span></span><br><span class="line">axios.defaults.baseURL = <span class="string">&#x27;/api&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>在根目录下新建一个vue.config.js的文件，在里面进行跨域的配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    open: <span class="literal">true</span>,</span><br><span class="line">    host: <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    port: <span class="number">8080</span>,</span><br><span class="line">    https: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">// 以上的ip和端口是我们本机的;下面为需要跨域的</span></span><br><span class="line">    proxy: &#123; <span class="comment">// 配置跨域</span></span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>: &#123;</span><br><span class="line">        target: <span class="string">&#x27;http://localhost:3000&#x27;</span>, <span class="comment">// 这里后台的地址模拟的;应该填写你们真实的后台接口</span></span><br><span class="line">        ws: <span class="literal">true</span>,</span><br><span class="line">        changOrigin: <span class="literal">true</span>, <span class="comment">// 允许跨域</span></span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">&#x27;^/api&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">          <span class="comment">// 请求的时候使用这个api就可以</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h4><p>在需要进行数据访问的页面进行请求，比如我在App.vue中进行请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F; import LoginRegister from &#39;.&#x2F;components&#x2F;Login-Register.vue&#39;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;app&#39;,</span><br><span class="line">  components: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    this.$axios(&#123;</span><br><span class="line">      method: &#39;get&#39;,</span><br><span class="line">      url: &#39;&#x2F;&#39;</span><br><span class="line">    &#125;).then(res &#x3D;&gt; &#123;</span><br><span class="line">      console.log(res)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>可以进行这些的条件是你的后端的服务器已经搭建好了，哪怕只是发送一句hello world！</strong></p>
+<p><img src="C:\Users\ljl\AppData\Roaming\Typora\typora-user-images\image-20200419202625926.png" alt="image-20200419202625926"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xhr.js?b50d:178 POST http:&#x2F;&#x2F;localhost:8080&#x2F;api&#x2F;adminUserM&#x2F;del net::ERR_EMPTY_RESPONSE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">createError.js?2d83:16 Uncaught (in promise) Error: Network Error</span><br><span class="line">    at createError (createError.js?2d83:16)</span><br><span class="line">    at XMLHttpRequest.handleError (xhr.js?b50d:83)</span><br></pre></td></tr></table></figure>
+
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
